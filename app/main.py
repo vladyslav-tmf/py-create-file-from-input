@@ -11,7 +11,7 @@ def main() -> None:
     with open(filename, "w") as file:
         file.write("\n".join(content_lines))
 
-    print(f"File name: \"{filename}\"")
+    print(f'File name: "{filename}"')
     print("File content:")
 
     for line in content_lines:
