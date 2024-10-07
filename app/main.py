@@ -1,6 +1,5 @@
 def main() -> None:
-    filename = input("Enter name of the file: ")
-    full_filename = f"{filename}.txt"
+    filename = input("Enter name of the file: ") + ".txt"
     content_lines = []
 
     while True:
@@ -9,11 +8,10 @@ def main() -> None:
             break
         content_lines.append(line)
 
-    with open(full_filename, "w", encoding="utf-8") as file:
-        for line in content_lines:
-            file.write(line + "\n")
+    with open(filename, "w") as file:
+        file.write("\n".join(content_lines))
 
-    print(f"File name: \"{full_filename}\"")
+    print(f"File name: \"{filename}\"")
     print("File content:")
 
     for line in content_lines:
